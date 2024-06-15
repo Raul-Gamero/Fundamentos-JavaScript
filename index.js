@@ -294,7 +294,25 @@ var texto="Tu nombre es "+nombre+" y tus apellidos"+apellidos;
 //con plantillas
 var texto= '<h3> Tu nombre es $(nombre),</h3> <h3> y tus apellidos $(apellidos)</h3)';
 
-//Operadores
+//OPERADORES
+
+//operadores de asignacion
+
+var numero1 = 3;
+var numero2 = 4;
+
+/*Erro, la asignacion siempre se realiza a una variable,
+por lo que en la izquierda no se puede indicar un numero */
+
+5 = numero1;
+
+//Ahora la variable numero1 vale 5
+numero1 = 5;
+
+//ahora la variable vale 4
+numero1 = numero2;
+
+
 
 
 
