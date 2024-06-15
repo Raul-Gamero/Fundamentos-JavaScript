@@ -294,6 +294,8 @@ var texto="Tu nombre es "+nombre+" y tus apellidos"+apellidos;
 //con plantillas
 var texto= '<h3> Tu nombre es $(nombre),</h3> <h3> y tus apellidos $(apellidos)</h3)';
 
+//Operadores
+
 
 
 
