@@ -352,6 +352,66 @@ var numero2 = 2;
 numero3 = ++numero1 + numero2;
 // numero3 = 8, numero1 = 6
 
+//OPERADORES LOGICOS
+
+//negacion
+
+var visible = true;
+alert(!visible); //muestra false y no true
+
+/* si la variable contiene un numero,
+se transforma en false si vale 0 y en true para caulquier otro */
+
+var cantidad = 0;
+vacio = !cantidad; //vacio = true
+
+cantidad = 2;
+vacio = !cantidad; //vacio = false
+
+/* Si la variable contiene una cadena de texto, 
+se transforma en false si la cadena es ("") y en true en cualquier otro caso */
+
+var mensaje = "";
+mensajeVacio = !mensaje //mensajeVacio = true
+
+mensaje = "Bienvenido";
+mensajeVacio = !mensaje; //mensajeVacio = false
+
+//AND
+
+/* La operacion logica AND obtiene su resultado combinando dos valores booleanos.
+El operado se indica mediante el simbolo && y su resultado solamente
+es true si los dos operados son true: */
+
+var valor1 = true;
+var valor2 = false;
+resultado = valor1 && valor2; //resultado = false
+
+valor1 = true;
+valor2 = true;
+resultado = valor1 && valor2; // resultado = true
+
+//OR
+
+/* La operacion logica OR tambien combina dos valores booleanos.
+El operado se indica mediante el simbolo || y su resultado es true si alguno de los operandos es true: */
+
+var valor1 = true;
+var valor2 = false;
+
+resultado = valor1 || valor2; //resultado = true
+
+valor1 = false;
+valor2 = false;
+resultado = valor1 || valor2; //resultado = false
+
+//OPERADORES MATEMATICOS
+
+
+
+
+
+
 
 
 
