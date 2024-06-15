@@ -312,6 +312,46 @@ numero1 = 5;
 //ahora la variable vale 4
 numero1 = numero2;
 
+//Operadores Incremento y decremento
+
+var numero = 5;
+++numero;
+alert(numero); //numero = 6
+
+//ejemplo anterior es equivalente a:
+
+var numero = 5;
+numero = numero + 1;
+alert(numero); //numero = 6
+
+var numero = 5
+--numero;
+alert(numero); //numero = 4
+
+// el anterior ejemplo es equivalente a:
+
+var numero = 5;
+numero = numero - 1;
+alert(numero); //numero = 4 
+
+//Los operadores de incremento o decremento pueden ser prefijo o sufijo
+
+var numero = 5; 
+numero++;
+alert(numero); //numero = 6 
+
+//sin embargo hay excepciones como en el siguiente caso:
+
+var numero1 = 5;
+var numero2 = 2;
+numero3 = numero1++ + numero2;
+//numero3 =7, numero1 = 6
+
+var numero1 = 5;
+var numero2 = 2;
+numero3 = ++numero1 + numero2;
+// numero3 = 8, numero1 = 6
+
 
 
 
