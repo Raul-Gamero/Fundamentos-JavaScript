@@ -407,22 +407,78 @@ resultado = valor1 || valor2; //resultado = false
 
 //OPERADORES MATEMATICOS
 
+var numero1 = 10;
+var numero2 = 5;
 
+resultado = numero1 / numero2; // resultado = 2 
 
+resultado = 3 + numero1; //resultado = 13
 
+resultado = numero2 - 4 // resultado = 1 
 
+resultado = numero1 * numero2; // resultado = 50
 
+// operador modulo calcula el resto de la division, se indica mediante el simbolo %
 
+var numero1 = 10;
+var numero2 = 5;
+resultado = numero1 % numero2; // resultado = 0
 
+numero1 = 9;
+numero2 = 5;
+resultado = numero1 % numero2; //resultado = 4 
 
+//Los operadores matematicos tambien se pueden combinar con el operador de asignacion para abreviar su notacion:
 
+var numero1 = 5;
 
+numero1 += 3; //numero1 = numero1 + 3 = 8
 
+numero1 -= 1; //numero1 = numero1 - 1 = 4 
 
+numero1 *= 2; //numero1 = numero1 * 2 = 10
 
+numero1 /= 5; //numero1 = numero1 / 5 = 1
 
+numero1 %= 4; //numero1 = numero1 % 4 = 1
 
+//Operadores Relacionales
 
+// Mayor > ; Menor < ; Mayor/igual >= ; Menor/Igual <= ; igual == ; Distinto !=
+
+var numero1 = 3;
+var numero2 = 5;
+resultado = numero1 > numero2; //resultado = false
+resultado = numero1 < numero2; //resultado = true
+
+numero1 = 5;
+numero2 = 5;
+
+resultado = numero1 >= numero2; // resultado = true
+resultado = numero1 <= numero2; // resultado = true
+resultado = numero1 == numero2; // resultado = true
+resultado = numero1 != numero2; // resultado = false
+
+/* == se utiliza para comparar el valor de dos variables
+    = se utiliza para asignar un valor a una variable */
+
+//el operador "=" asgna valores
+var numero1 = 5;
+resultado = numero1 = 3; // numero1 = 3 y resultado = 3
+
+//el operador "==" compara variables 
+var numero1 = 5;
+resultado = numero1 == 3; // numero1 = 5 y resultado = false 
+
+//Los operadores relacionales tambien se pueden utilizar con variables de tipo cadena de texto: 
+
+var texto1 = "hola";
+var texto2 = "hola";
+var texto3 = "adios";
+
+resultado = texto1 == texto3; // resultado = false
+resultado = texto1 != texto2; // resultado = false
+resultado = texto3 >= texto2; // resultado = false 
 
 
 
