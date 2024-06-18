@@ -881,8 +881,95 @@ var busqueda = numeros.some(numero=>numero>40);
 
 //Almacena true o false
 
+//ARRAYS MULTIDIMENSIONALES
 
+/* No son más que un array compuesto de otros arrays.
+Es decir, un array que, en lugar de tener números o
+strings en su interior, tiene otros arrays.
+Coloquialmente podríamos decir que es un array de
+arrays. */
 
+var peliculas=['Batman' , 'Cars' , 'It'];
+var categoria=['Accion' , 'Infantil' , 'Terror'] ;
+var cine = [peliculas, categoria] ; 
+console.log(cine);
+
+/* Para acceder a un elemento, por ejemplo, categoría
+infantil, deberemos indicar la posición que dicho
+elemento ocupa en el primer array (en el array
+contenedor) seguida de la posición que ocupa en el
+segundo array (el array contenido): */
+
+console.log(cine[0][1]);
+//en este ejemplo nos imprimiria Cars
+
+//POO
+
+//En JavaScript los objetos tienen propiedades y métodos
+//Las propiedades se modifican con la nomenclatura del punto y el valor entre comillas
+
+nombreDelObjeto.propiedad="valor";
+Renault.ancho="2000";
+Botton.style.width="500px ";
+Document.write();
+Windows.alert();
+
+//Para llamar a los métodos:nombreDelObjeto.metodo()
+
+Renault.acelera();
+
+//Ejemplo revisar openjs.html
+
+//FUNCIONES
+
+/*Las funciones se definen como un conjunto de
+instrucciones preparadas para ser llamadas en
+cualquier momento. Solo se ejecutarán si las
+llamamos. Su finalidad es, pues, la reutilización de
+código. */
+
+/* Sintaxis:
+
+function nombre_funcion(){
+//Codigo a ejecutar
+}
+
+Y luego, en otro punto de la página HTML llamamos a la función
+
+nombre_funcion();
+
+*/
+
+/*Salvo las funciones predefinidas de JavaScript,
+ejemplo funcion suma: */
+
+//Declaracion de la funcion 
+
+let num1 = 5;
+let num2 = 10;
+
+function suma(){
+    console.log("La suma de " + num1 + " y" + num2 + "es " + (num1+num2));
+}
+//Llamada a la funcion
+suma();
+
+/* podemos crear funciones que trabajen con
+valores que deberemos pasarles cuando las
+llamemos. Son las llamadas funciones con
+parámetros */
+
+//Declaracion de la funcion
+
+function suma2(num1, num2){
+    console.log("La suma de " + num1 + " y " + num2 + " es " + (num1+num2));
+}
+//Llamada a la funcion
+suma(3, 7);
+
+//Date() Revisar openjs.html
+
+// Revisar 2 funciones mas en el HTML
 
 
 
