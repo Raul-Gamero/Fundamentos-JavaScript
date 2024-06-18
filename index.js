@@ -812,6 +812,33 @@ alert(array1[4]);
 //REVISA openjs.html
 
 
+// Podemos poner un elemento como undefined, con loque su valor será no definido (o desconocido);
+
+articulos [0] = undefined;
+
+//Para averiguar la posición de un elemento
+
+var posicion = articulos.indexOF("pantalones");
+
+//Convertir un array a texto
+
+var mistring = articulos.join();
+// Me lo convierte a un string separado por comas
+
+/* Me lo convierte a un string separado por comas.
+Para hacer lo contrario, es decir convertir un string
+en array lo haremos con el método split(). Dentro de
+los parámetros pondremos el carácter que hará de
+separador. */
+
+var cadena = "nombre1,nombre2,nombre3";
+var miArray = cadena.split(",");
+
+/* 
+
+
+
+
 
 
 
