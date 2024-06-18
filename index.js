@@ -843,6 +843,43 @@ cadena.reverse();
 
 //Esto nos ordena un array alfabéticamente 
 
+//Recorrrer arrays con for in 
+
+// Otra forma de recorrer un array es con el bucle for in
+
+for(let nombre in nombres){
+    document.write("<li>"+nombres[nombre]+"</li>");
+};
+
+//En este caso nombre es el índice
+
+//BUSQUEDA EN UN ARRAY
+
+// Para realizar búsquedas en un array podemos usar el método find() que tiene dentro una función de carga
+
+var 
+busqueda=nombres.find(function(nombre){
+    return nombre==nombre1;
+});
+
+//busqueda almacena el texto que estamos buscando
+//simplificado:
+
+var busqueda=nombres.find(nombre => nombre==nombre1);  
+
+// De forma similar podemos buscar el índice con el método findIndex()
+
+var busqueda=nombres.findindex(nombre => nombre==nombre1);
+
+/* Otro método interesante es some() que nos permite
+comprobar si alguno de los elementos del array
+cumple una determinada condición. Por ejemplo,
+comprobar si hay elementos mayores de 40: */
+
+var numero=[3,45,33,65,776];
+var busqueda = numeros.some(numero=>numero>40);
+
+//Almacena true o false
 
 
 
