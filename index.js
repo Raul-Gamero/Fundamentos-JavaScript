@@ -584,9 +584,114 @@ if(!isNaN(num1)&&!isNaN(num2)){
     alert("No has introducido numeros");
 }
 
+//SWITCH .... CASE
 
+//cualquier evaluacion que se pueda hacer con switch case tambien se puede hacer con 
+/// if ... else 
 
+/*sintaxis
 
+swich(Variable a comprobar) {
+case"opcion1":
+    instrucciones;
+    break;
+case"opcion2":
+    instrucciones;
+    break;
+..............
+case"opcionN";
+    instrucciones;
+    break;
+default:
+    instrucciones;
+}
+*/
+
+//swith: entre parentesis el nombre de la varibale cuyo valor queremos comprobar
+//segun sea dicho valor se debe de ejecutar una serie de instrucciones
+
+/*Cada valor contra el que vamos a comparar se
+incluye tras la palabra clave ‘case‘ separada por
+dos puntos ( : ) y el valor encerrado en comillas*/
+
+/*Incluimos un ‘break‘ en cada cláusula ‘case’ para
+que el programa no se pare ahí, sino que salga de
+ese punto y continúe después del final de la
+instrucción switch con las instrucciones
+siguientes que contenga el programa. */
+
+/* La última clausula ‘default‘ realiza el mismo
+cometido que el último ‘else’ que ponemos tras
+una serie de ‘else if’. */
+
+/*Partiendo de una variable edad, crear un programa
+que impprima diferentes mensajes segun sea el valor de edad */
+
+var edad = 18;
+var imprime = "";
+
+switch (edad) {
+    case 18:
+        imprime = "Acabas de cumplir la mayoria de edad";
+        break
+    case 25:
+        imprime = "Eres un adulto";
+        break;
+    case 50:
+        imprime = "Eres maduro";
+        break;
+    default:
+        imprime = "Otra edad no contemplada";
+        break;
+}
+
+document.write(imprime);
+
+//BUCLES
+
+//bucles determinados: se sabe cuantas veces se va a repetir un codigo. ejemplo for
+
+//bucles indeterminados: no se sabe cuantas veces se va a reetir, dependera que se cumpla una condicion
+//ejemplo while y do while
+
+//El bucle determinado FOR
+
+/*Es un tipo de bucle cuya ejecución dura un número
+determinado de veces o hasta que su condición se
+evalué como falsa (false) */
+
+/* su sintaxis es:
+for(inicio; condicion; incremento/decremento){
+codigo a repetir
+}
+*/
+
+//inicio: se suele crear una variable de nombre i,j,k, etc.
+//condicion: se debe mantener para que siga ejecutando el ciclo
+//incremento/decremento: esta expresion cambia el valor de la variable numerica indicada en incio
+//codigo a repetir: cuerpo del bucle conjunto de instrucciones que se jecutan durante cada interacion del blucle
+
+for(var i=0;i<10;i++){
+    document.write("Hola"="<br>");
+}
+document.write("Ejecucion terminada.");
+
+for(i=0 ; i<10 ; i++){
+    document.write("En esta vuelta de bucle I vale " + i);
+}
+
+document.write("Ejecucion terminada."); 
+
+/* El principal uso del bucle for es recorrer arrays,
+poniendo como condición que el bucle se repetirá
+tantas veces como elementos tengamos en nuestro
+array: */
+
+var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+for(var i = 0; i < meses.length; i++)
+{
+    document.write(meses[i] + "<br/>");
+}
 
 
 
