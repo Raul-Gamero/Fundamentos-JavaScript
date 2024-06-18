@@ -834,8 +834,14 @@ separador. */
 var cadena = "nombre1,nombre2,nombre3";
 var miArray = cadena.split(",");
 
-/* 
+/* Para ordenar un array usaremos el método el método
+short(). Para ordenar por orden inverso el método
+reverse(); */ 
 
+cadena.short();
+cadena.reverse();
+
+//Esto nos ordena un array alfabéticamente 
 
 
 
