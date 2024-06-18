@@ -693,7 +693,123 @@ for(var i = 0; i < meses.length; i++)
     document.write(meses[i] + "<br/>");
 }
 
+//WHILE. DO ... WHILE
 
+/* Es similar al ciclo for explicado anteriormente. Se
+ejecuta hasta que la condición sea falsa (false). La
+diferencia se basa en que la evaluación se realiza al
+final de cada iteración */
+
+//WHILE
+
+//podemos encontrarnos con que la condicion no se cumpla ni en la primera comprobacion, el codigo nunca se ejecutaria
+
+/* While( Condición a cumplir){
+Código a ejecutar mientras se cumpla la condición} */
+
+var contador = 0;
+var meses = ["Enero", "Febrero" , "Marzo" , "Abril" , "Mayo" , "Junio" , "Junio" , "Julio" , "Agosto" , "Septiembre" , "Octubre" , "Noviembre" , "Diciembre"];
+while(contador < meses.length) {
+    document.write(meses[contador] + "<br>");
+    contador++;
+}
+
+let contador = 0;
+let ciclos = Number(prompt("Introduce numero de ejecucion"));
+
+while (contador < ciclos){
+    console.log("Contador vale ahora" + contador);
+    contador++; 
+}
+
+/*do {codigo a ejecutar mientras se cumpla la condicion}
+while(condicion a cumplir) */
+
+/* crear un número
+aleatorio entre 0-100 y pedir al usuario que intente
+adivinarlo */
+
+//Creamos un numero aleatorio entre 0 y 1
+//Despues lo que multiplicamos por 100 para que este entre 0 - 100
+//Lo redondeamos para que sea entero
+
+var numero = parseInt(Math.random()*100)
+
+var numero_introducido;
+var contador = 0;
+
+while (numero != numero_introducido)
+{
+    numero_introducido =
+    Number(prompt("Introduce numero: "));
+    contador++;
+
+    if (numero_introducido > numero) {
+        alert("Demasiado alto");
+    }
+
+    if (numero_introducido < numero) {
+        alert("Demasiado bajo");
+    }
+}
+
+alert("Correcto!!!, el numero era el " + numero + ". Has acertado en " + contador + " intentos.");
+
+//BREAK
+
+//nos permite salir de un bucle de ejecucion al cumplirse una condicion
+
+var year = 2000;
+while (year < 2010) {
+    document.write(year + "<br>");
+    if (year == 2005) {
+        break;
+    }
+    year++;
+}
+
+//ARRAYS 
+
+/* Los arrays nos permiten trabajar con conjuntos de
+valores y almacenarlos en una única dirección de
+memoria */
+
+var Articulos = ["Zapatillas" , "camiseta" , "pantalon" , "calcetines"];
+var Articulos = new 
+array("zapatillas","camiseta","pantalon","calcetines");
+
+//ejemplo de acceso a un array
+
+alert(Articulos[1]); 
+
+/* La posición de los elementos empieza a contar desde
+cero, es decir, en nuestro array Artículos, el elemento
+en la posición cero es zapatilla, en la posición 1
+tenemos camiseta, en la posición 2 tenemos
+pantalón y en la posición 3 tenemos calcetines */
+
+/* En el siguiente ejemplo vamos a crear un array de
+tres elementos y vamos a pedir al usuario que
+introduzca un valor mediante un comando prompt.
+Dicho valor se almacenará en la posición 4. */
+
+var 
+array1=["objeto1","objeto2","objeto3"];
+array1[3]="objeto4";
+array1[4]=prompt("Introduce objeto4");
+alert(array1[4]);
+
+//FUNCIONES DE LOS ARRAYS
+
+//Length:Devuelve la longitud del array
+//push:Agrega elementos al final del array
+//unshift:Agrega elementos al principio del array
+//pop:Elimina elementos al final del array.
+//shift:Elimina elementos al principio del array
+
+//Aquí podemos ver un ejemplo de estas funciones:
+
+//REVISA openjs.html
 
 
 

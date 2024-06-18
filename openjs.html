@@ -36,3 +36,29 @@
     </script>
 </head>
 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Documento sin titulo</title>
+        <script>
+            var articulos = ["balon" , "botas" , "camiseta" , "pantalon"];
+        </script>
+    </head>
+    <body>
+        <script>
+            document.write("<p>El primer articulo es <strong> " + articulos[0] + "</strong></p> ");
+            document.write("<P>La longitud del array es " + articulos.length + "<p>");
+            document.write("<p>El ultimo articulo es <strong>" + articulos[articulos.length - 1] + "</strong></p>");
+            articulos.unshift("pelota");
+            articulos.push("canasta");
+            document.write("<p>El primer articulo ahora es <strong>" + articulos[0] + "</strong></p>");
+            document.write("<p>El último articulo ahora es <strong>" + articulos[articulos.length - 1] + "</strong></p>");
+            document.write("<P>La longitud del array ahora es " + articulos.length + "</p>");
+            document.write(articulos); 
+            articulos.push(prompt("introduce nuevo articulo"));
+            document.write("<br>");
+            document.write(articulos);
+        </script>
+    </body>
+</html>
+
