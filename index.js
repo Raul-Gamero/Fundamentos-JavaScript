@@ -480,6 +480,113 @@ resultado = texto1 == texto3; // resultado = false
 resultado = texto1 != texto2; // resultado = false
 resultado = texto3 >= texto2; // resultado = false 
 
+//CONDICIONALES Y BUCLES EN JAVASCRIPT 
+
+/*Las instrucciones que te permite controlar las decisiones y bucles de ejecucion se denominan 
+"Estructuras de control."Una parte importante de una estructura de control es la "condicion",
+cada condicion es una expresion que se evalua a true o false. */
+
+/* JavaScript ofrece un tota de cuatro instrucciones para procesar codigo de acuerdo a condiciones
+determinadas por el programador: if, switch, for y while/ */
+
+//CONDICIONALES
+
+//Se ejecuta un cierto bloque de codigo cuando se cumple alguna condicion
+
+//COMPARADORES 
+
+//operador de comparacion 
+
+// == igual que.. comprueba valor x==y
+// === Estrictamente igual. Comprueba valor tipo. x===y
+// != Diferente. Es igual que poner <> x!=y x<>y
+// < Menor que x<y > Mayor que x>y
+// <= Menor o igual que x<=y
+// >= Mayor o igual que x>=y
+
+//operador logico
+
+// && Y logico a>b&&b<c
+// || O logico a=b||b<c
+// ! NO logico x!=y
+
+/* JavaScript trabaja con dos tipos de condicionales, IF ... ELSE y SWTICH ... CASE. 
+A continuacion, veremos el uso de ambos. */
+
+// IF ... ELSE 
+
+/* Se utiliza para decidir si una determinada declaracion o bloque de instrucciones se ejecutara o no,
+es decir, si una determinada condicion es verdaderam entonces un bloque de instruccion se ejecutara de otro
+modo se ejecutaran otras instrucciones de codigo */ 
+//La sintaxis puede tener varias formas:
+
+//Opcion 1. Una sola condicion a comprobar. 
+
+/* 
+IF(Condicion a cumplir){
+Instruciones a ejecutar en caso de que la condicion
+se cumpla
+}else{
+instrucciones a ejecutar en caso de que la condicion no se cumpla
+}
+*/
+
+var precio=30000;
+var dinero=prompt("Introduce cuanto dinero tienes: ");
+
+if(dinero>precio){
+    alert("Te puedes comprar el coche");
+}else{
+    alert("Te vas en autobus");
+}
+
+//Opcion 2. Mas de una condicion a comprobar
+
+/*
+IF(Condicion a cumplir){
+Instrucciones a ejecutar en caso de que la condicion se cumpla
+}else IF(Segunda condicion a cumplir){
+Instruciones a ejecutar en caso de que la segunda condicion se cumpla
+}else{
+Instrucciones a ejecutar en caso de que ninguna condicion 
+se cumpla
+}
+*/
+
+//se pueden poner tantos else ... if como queramos
+//else final no es obligatorio pero es util para ejecutar instrucciones
+
+var precio = 30000; 
+var dinero = prompt("Intruce cuanto dinero tienes: ");
+var edad = prompt("Introduce tu edad: ");
+
+if ((precio < dinero ) && (edad >= 18)) {
+    alert("Te puedes comprar el coche");
+}else if ((precio < dinero) && (edad < 18)) {
+    alert("Tienes el dinero pero no la edad");
+}else if ((precio > dinero) && (edad >= 18)){
+    alert("Tienes la edad pero no el dinero");
+}else if ((precio > dinero) && (edad < 18)){
+    alert("Ni dinero ni edad");
+}
+
+/* Si el usuario introdujese un valor que no es un numero tendriamos un problema.
+todo lo que el usuario introduzca por promp se considera un string, y para hacer
+la comprobacion de si edad>=18 necesitamos que edad sea un numero */
+
+// Para averiguar si un valor es numerico usamos la funcion isNaN()
+
+var num1=prompt("Introduce numero");
+var num2=prompt("Introduce numero2");
+if(!isNaN(num1)&&!isNaN(num2)){
+    alert(parseInt(num1)+parseInt(num2));
+}else{
+    alert("No has introducido numeros");
+}
+
+
+
+
 
 
 
