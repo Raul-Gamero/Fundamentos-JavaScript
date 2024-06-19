@@ -1194,6 +1194,134 @@ de evento asociado */
 //Manejadores de evento especificados en el codigo HTML  (Revisar HTML)
 
 
+//MANEJADORES DE EVENTOS ASOCIADOS CON addEventListener
+
+/* Para asociar un evento a un elemento de la página
+necesitamos hacer dos pasos:
+• Acceder al objeto sobre el que queremos definir
+el evento. Para esto tenemos que acceder al
+DOM para localizar el objeto adecuado, que
+representa la etiqueta sobre la que queremos
+asociar el manejador del evento.
+• Sobre el objeto del DOM, aplicamos
+addEventListener(), indicando el tipo de evento y
+la función manejadora. */ 
+
+// Por ejemplo, tenemos este elemento de la página:
+
+// html:  
+
+/* Lo más cómodo para acceder a un elemento de la
+página y recuperar el objeto del DOM asociado a esa
+etiqueta es usar el identificador (atributo "id"). En
+este caso el identificador es "miBoton". Para acceder
+a ese elemento usamos el método getElementById()
+del objeto document, enviando el identificador. */
+
+var miBoton = 
+document.getElementById('miBoton');
+
+/*Ahora tenemos el objeto del DOM asociado a ese
+botón en la variable "miBoton". Sobre ese objeto ya
+podemos invocar el método addEventListener(). A
+este método debemos pasarle dos parámetros. El
+primero es el tipo de evento que queremos detectar y
+el segundo la función manejadora del evento que
+queremos que se ejecute cuando se produce el
+evento. */
+
+miBoton.addEventListener('click',function(){
+    alert('Has hecho clic!!')
+})
+
+/* Vamos a ver un segundo ejemplo, sobre una imagen
+en la que vamos a asociar un manejador para el tipo
+de evento "mouseover", que se produce cuando el
+usuario pone el puntero del ratón encima de un
+elemento. */
+
+//Revisar html  
+/*  Ahora le asociamos el manejador de evento para el
+tipo de evento "mouseover" con este código
+JavaScript. */ 
+
+var miImagen = 
+document.getElementById('imagen');
+miImagen.addEventListener('mouseover', function(){
+    alert('Has pasado el raton encima de la imagen')
+})
+
+//APENDICE DE EVENTOS DE JAVASCRIPT
+
+//  los eventos más importantes definidos por JavaScript:
+/*
+
+EVENTO / DESCRIPCION / 
+ELEMENTOS PARA LOS QUE ESTA DEFINIDO
+
+onblur / deseleccionar el elemento / 
+<button>, <input>, <label>, <select>, <textarea>, <body>
+
+onchange / deseleccionar un elemento que se ha modificado / 
+<input>, <select>, <textarea>
+
+onclick / Pinchar y soltar el raton /
+Todos los elementos
+
+ondblclick / Pinchar 2 veces seguidas el raton /
+Todos los elementos
+
+onfocus / Seleccionar un elemento /
+<button>, <input>, <label>, <select>, <textarea>, <body>
+
+onkeydown / Pulsar una tecla (sin soltar) /
+Elementos de formulario y <body>
+
+onkeypress / Pulsar una tecla / 
+Elementos de formulario y <body>
+
+onkeyup / soltar una tecla pulsada / 
+Elementos de formulario y <body>
+
+onload / La pagina se ha cargado completamente / 
+<body>
+
+onmousedown / Pulsar (sin soltar) un boton del raton /
+Todos los elementos
+
+onmousemove / Mover el raton /
+Todos los elementos
+
+onmouseout / El raton "sale" d el elemento (pasa por encima de otro elemento) / 
+Todos los elementos
+
+onmouseover / El raton "entra" en el elemento(pasa por encima del elemento) /
+Todos los elementos
+
+onmouseup / soltar el boton que estaba pulsando en el raton /
+Todos los elementos
+
+onreset / Inicializar el formulario (borrar todos sus datos) /
+<form>
+
+onresize / se ha modificado el tamanio de la ventana del navegador /
+<body>
+
+onselect / seleccionar un texto /
+<input>,<textarea>
+
+onsubmit / Enviar el formulario <form>
+
+onunload / se abandona la pagina (por ejemplo al cerrar navegador) /
+<body>
+
+*/
+
+
+
+
+
+
 
 
 
