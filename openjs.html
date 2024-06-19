@@ -190,3 +190,64 @@ funcionalidades de las funciones de callback, pero
 hemos añadido la función setInterval() para que se
 retrasen e incluso se actualice, aprovechando de
 paso la forma de hacer un reloj en JavaScript… -->
+
+<!-- Manejadores de evento especificados en el codigo HTML  -->
+
+<!-- El maneador de eventos se puede colocar en la
+etiqueta HTML del elemento de la página que
+queremos que responda a las acciones del usuario.
+Para ello usamos atributos especiales en las
+etiquetas del HTML, que tienen el prefijo "on"
+seguido del tipo de evento. Por ejemplo, el
+manejador asociado en el atributo "onclick" se
+ejecuta cuando se produce un clic en una etiqueta.
+Vamos a poner un ejemplo sobre el manejador de
+eventos onclick. Ya sabemos que sirve para describir
+acciones que queremos que se ejecuten cuando se
+hace un clic. Por tanto, si queremos que al hacer click
+sobre un botón se ejecuta alguna función, escribimos
+el manejador onclick en la etiqueta <INPUT
+type=button> de ese botón. -->
+
+<input type="button" value="pulsame" onclick="alert('Boton pulsado')"></input>
+
+<!--  esta vez sobre un menú
+desplegable, en el que definimos un comportamiento
+cuando cambiamos el valor seleccionado -->
+
+<select onchange="window.alert('Cambiaste la seleccion')">
+    <option value="opcion1">Opcion 1
+    <option value="opcion2">Opcion 2
+</select>
+
+<!-- Dentro de los manejadores de eventos podemos
+colocar tantas instrucciones como deseemos, pero
+siempre separadas por punto y coma -->
+
+<!-- Lo habitual es colocar una sola instrucción, y si se
+desean colocar más de una se suele crear una
+función con todas las instrucciones y dentro del
+manejador se coloca una sola instrucción que es la
+llamada a la función -->
+
+<input type="button" value=Pulsar onclick="x=30; window.alert(x); window.document.bgColor = 'red'">
+
+<!--Son instrucciones muy simples como asignar a x el
+valor 30, hacer una ventana de alerta con el valor de
+x y cambiar el color del fondo a rojo  -->
+
+<!-- Sin embargo, tantas instrucciones puestas en un
+manejador quedan un poco confusas, habría sido
+mejor crear una función: -->
+
+<script>
+    function ejecutaEventoOnclick(){
+        var x = 30;
+        window.alert(x);
+        window.document.bgColor = 'red';
+    }
+</script>
+
+<FORM>
+    <input type="button" value="Pulsar" onclick="ejecutaEventoOnClick()">
+</FORM>
