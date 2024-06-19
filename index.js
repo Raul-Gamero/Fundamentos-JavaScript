@@ -1123,6 +1123,22 @@ invocada */
 
 //REVISAR HTML
 
+/* Existe una sintaxis para las funciones de callback
+llamada funciones de flecha, en las que se omite la
+palabra function y se sustituye por una flecha puesta
+tras el nombre de la función: */
+
+funcionPrincipal(function(nombre){
+    alert('me llamo ' + nombre);
+});
+
+//quedaria asi
+
+funcionPrincipal(nombre => {
+    alert('me llamo ' + nombre);
+});
+
+
 
 
 
