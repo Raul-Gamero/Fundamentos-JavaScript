@@ -971,6 +971,160 @@ suma(3, 7);
 
 // Revisar 2 funciones mas en el HTML
 
+//PARAMETROS REST Y SPREAD
+
+/* Cuando no sepamos con exactitud el número de
+parámetros que le pueden llegar a nuestra función,
+pondremos tres puntos para hacer referencia al resto
+de posibles parámetros. Dichos parámetros serán
+almacenados en un array con el nombre de mi
+parámetro. */
+
+function numeros(num1, num2, ... otros){
+    document.write(num1 + " , " + num2 + "<br>");
+    document.write(otros);
+}
+
+numeros(2,3,4,54,332);
+
+// En este ejemplo otros vale 4,54,332. Es un array.
+// Si no tuviese los tres puntos valdria 4. 
+
+//PARAMETROS SPREAD
+
+/* De forma similar, en el siguiente ejemplo hemos
+creado un array con dos elementos y se lo hemos
+pasado a la función como parámetro. Si no usamos
+los tres puntos, lo que le estamos diciendo es que
+num1=[1,10] y num2=3 y otros =[4,54,332]. Pero si
+le ponemos los tres puntos lo que me coge es
+num1=1, num2=10 y otros=[3,4,54,332] */
+
+function numeros(num1, num2, ... otros){
+    document.write(num1 + " , " + num2 + "<br>");
+    document.write(otros);
+}
+var arrayNumeros=[1,10];
+numeros(...arrayNumeros,3,4,54,332);
+
+//FUNCIONES ANONIMAS
+
+//Las funciones anónimas son aquellas que no tienen nombre y las podemos guardar dentro de una variable
+
+var miFuncion = function(nombre){
+    return "El nombre es " + nombre;
+}
+
+//Para llamarla
+
+miFuncion("Angel"); 
+
+//CALLBACK
+
+/* Los Callbacks en JavaScript son como su propio
+nombre en inglés, indica, llamadas de vuelta, quiere
+decir que cuando invoco una función pasándole como
+parámetro otra función (el callback) esta función
+parámetro se ejecuta cuando la función principal ha
+terminado de ejecutarse. O cuando a nosotros nos
+interese… */
+
+function funcionPrincipal(callback){
+    alert('hago algo y llamo al callback avisando que termine');
+    callback();
+}
+funcionPrincipal(function(){
+    alert('termino de hacer algo');
+});
+
+/* Aquí vemos como la función funcionPrincipal se
+ejecuta recibiendo un argumento que es otra función
+y que se ejecuta después de que termine su labor
+llamando a callback. */
+
+/* podemos hacer
+incluso que la función
+callback reciba argumentos que se envían desde la
+función principal… */
+
+function funcionPrincipal(callback){
+    alert('hago algo y llamo al callback avisando que termine');
+    callback('Miguel');
+}
+
+funcionPrincipal(function(nombre){
+    alert('me llamo ' + nombre);
+});
+
+/* ahora imaginemos que
+queremos encadenar diferentes funciones con
+callbacks, lo cual es muy sencillo siguiendo con la
+misma lógica */
+
+function funcionPrincipal(callback1,callback2,callback3){
+    //codigo de la funcion principal
+    callback1();
+    //mas codigo de la funcion principal
+    callback();
+    callback3();
+}
+funcionPrincipal(
+    function(){
+        alert('primer callback');
+    },
+    function(){
+        alert('segundo callback');
+    },
+    function(){
+        alert('tercer callback');
+    }
+);
+
+/* Aquí vemos como al invocar a la función principal se
+le pasan como argumentos las tres funciones, que se
+ejecutan, las cuales podrían recibir parámetros… */ 
+
+/* De modo que podemos declarar las funciones que se
+enviarán como argumentos aparte, lo cual nos
+permite también utilizarlas en otras partes del
+código */
+
+function funcionPrincipal(callback1, callback2, callback3){
+    //codigo de la funcion principal
+    callback1();
+    //mas codigo de la funcion principal
+    callback2();
+    //mas codigo de la funcion principal
+    callback3();
+}
+function callback1(){
+    alert('primer callback');
+}
+function callback2(){
+    alert('segundo callback');
+}
+function callback3(){
+    alert('tercer callback');
+}
+
+funcionPrincipal(callback1, callback2, callback3);
+
+/*Podemos observar cómo se declaran todas funciones
+y luego se pasan como argumentos de la función
+principal para poder utilizarlas dentro de la misma. */
+
+/* vamos a ver por encima el uso de otra función de JavaScript
+llamada setInterval(), esta función nos sirve para
+retardar acciones, y necesita dos parámetros para
+funciones; una función que invoca a la función que
+vamos a usar y un valor numérico que dice en
+milisegundos el retraso y actualización de la función
+invocada */ 
+
+//REVISAR HTML
+
+
+
 
 
 

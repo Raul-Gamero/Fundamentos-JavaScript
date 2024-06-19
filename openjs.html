@@ -144,3 +144,44 @@ introducidos por el usuario -->
         </script>
     </body>
 </html>
+
+<!-- Esto que parece un lío, vamos a verlo en un código
+donde mostraremos un alert, un reloj y un texto, y
+donde el reloj se va modificando cada segundo y el
+texto tardará en aparecer 3 segundos: -->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Documento sin titulo</title>
+    </head>
+
+    <body>
+        <h3 id="demo"></h3>
+        <h3 id="demo2"></h3>
+        <script>
+            function funcionPrincipal(callback1, callback2, callback3){
+                //Codigo de la funcion principal
+                callback1();
+                //mas codigo de la funcion principal
+                var miVar = setInterval(function(){callback2() }, 1000);
+                //mas codigo de la funcion principal
+                var miVar2 = setInterval(function(){ callback3() },3000);
+                //mas codigo si fuera necesario
+            }
+            function callback1(){
+                alert('primer callback');
+            }
+            function callback2(){
+                var d = new Date();
+                var t = d.toLocaleTimeString();
+                document.getElementById("demo").innerHTML = t;
+            }
+            function callback3(){
+                document.getElementById("demo2").innerHTML = 'Esto es un callback3';
+            }
+            funcionPrincipal(callback1,callback2,callback3);
+        </script>
+    </body>
+</html>
+
