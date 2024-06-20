@@ -1318,6 +1318,61 @@ onunload / se abandona la pagina (por ejemplo al cerrar navegador) /
 */
 
 
+/* DOM (DOCUMENT OBJECT MODEL) 
+
+La finalidad de JavaScript es interactuar con el
+código HTML, para ello tenemos que tener muy claro
+lo que es el DOM. (Document Object Model). Es decir,
+el árbol de etiquetas que componen nuestro HTML.
+Suponiendo que tenemos un elemento HTML con un
+id=caja podemos referirnos a él con: 
+*/
+
+var cajas=document.getElementById("caja").innerHTML;
+
+//De esta forma cargamos en la variable cajas el valor del elemento con id=caja
+
+//También podemos modificar las propiedades o el valor del elemento con id=caja
+
+var cajas=document.getElementById("caja");
+    cajas.innerHTML;
+    cajas.style.background="red";
+
+//Otra forma de seleccionar un elemento de nuestra página es con querySelector
+
+var cajas=document.querySelector("#caja");
+
+//De esta forma selecciono también el elemento con id=caja.
+
+//Si quiero seleccionar un elemento cuya class=caja
+
+var cajas=document.querySelector(".caja");
+
+/* Vemos pues cómo podemos, desde JavaScript,
+seleccionar y modificar elementos de HTML mediante
+el uso del DOM. */
+
+//De esta forma si selecciono el elemento solo es para seleccionar el nombre de la etiqueta
+
+var cajas=document.querySelector("caja");
+
+//con # para hacer referencia a su ID
+
+var cajas=document.querySelector("#caja");
+
+//y con punto para hacer referencia a su clase. 
+
+var cajas=document.querySelector(".caja");
+
+/* La única diferencia es que con innerHTML(), si
+quiero, puedo añadirle un valor nuevo al contenido.
+También podemos seleccionar elementos por su
+etiqueta .class con:
+document.getElemenByClassname();  */
+
+//BOM (BROWSER OBJECT MODEL)
+
+
 
 
 
