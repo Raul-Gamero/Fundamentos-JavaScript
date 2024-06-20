@@ -1372,6 +1372,44 @@ document.getElemenByClassname();  */
 
 //BOM (BROWSER OBJECT MODEL)
 
+/* El BOM (Browser Object Model) contiene multitud de
+propiedades que nos permiten trabajar con el
+navegador.
+De igual forma que en el DOM podemos seleccionar
+objetos del documento, con el BOM podemos
+seleccionar objetos del navegador y modificarlos. Por
+ejemplo, podemos seleccionar la ventana: */
+
+console.log(window.innerHeight);
+console.log(window.innerWidth);
+
+/* En este caso jugamos con el tamaño de la ventana.
+No existen estándares oficiales para el modelo de
+objetos de navegador ( BOM ) por lo que no suele ser
+muy usado, pero es interesante que el alumno sepa
+al menos de su existencia y funcionamiento */
+
+//similar a lo anterior
+
+console.log(screen.width)
+
+//Sacar la URL cargada y mas datos:
+
+console.log(window.location);
+
+//Sacar la Href:
+
+console.log(window.location.href);
+
+//Abrir una nueva tab en el navegador
+
+window.open(URL_de_destino);
+
+
+
+
+
+
 
 
 
